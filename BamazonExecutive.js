@@ -107,7 +107,7 @@ function displayTable() {
 		  // commit the transaction
       con.commit(function(err) {
         if (err) {
-          return connection.rollback(function() {
+          return con.rollback(function() {
             throw err;
           });
 				}
